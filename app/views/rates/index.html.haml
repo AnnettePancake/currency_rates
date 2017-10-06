@@ -1,8 +1,8 @@
 #buy_rates
 .average
-  = "Average USD: #{Rate.day_average('USD', :buy).round(2)}"
-  = "Average EUR: #{Rate.day_average('EUR', :buy).round(2)}"
+  = "Average USD: #{Rate.day_average('USD', :buy)}"
+  = "Average EUR: #{Rate.day_average('EUR', :buy)}"
 #sell_rates
 .average
-  = "Average USD: #{Rate.day_average('USD', :sell).round(2)}"
-  = "Average EUR: #{Rate.day_average('EUR', :sell).round(2)}"
+  = "Average USD: #{Rate.day_average('USD', :sell)}"
+  = "Average EUR: #{Rate.day_average('EUR', :sell)}"

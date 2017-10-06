@@ -23,7 +23,8 @@ class Rate < ApplicationRecord
 
     def day_average(currency, type)
       rates = last_rates(currency)
-      rates.pluck(type).sum / rates.size
+      return ' - ' if rates.empty?
+      (rates.pluck(type).sum / rates.size).round(2)
     end
   end
 end
