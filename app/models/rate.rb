@@ -20,5 +20,10 @@ class Rate < ApplicationRecord
     def buy_values(currency)
       last_rates(currency).map { |rate| [rate.created_at.strftime('%H:00'), rate.buy] }
     end
+
+    def day_average(currency, type)
+      rates = last_rates(currency)
+      rates.pluck(type).sum / rates.size
+    end
   end
 end
