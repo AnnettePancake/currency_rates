@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -8,6 +10,7 @@ Bundler.require(*Rails.groups)
 
 module CurrencyRates
   class Application < Rails::Application
+    config.eager_load_paths += %W[#{config.root}/lib]
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
