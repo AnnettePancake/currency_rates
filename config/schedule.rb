@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# every :hour do
+# every :day do
 #   rake 'fetch:rates'
 # end
 

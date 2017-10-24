@@ -3,7 +3,7 @@ window.Rates = {}
 Rates.init = (type) ->
   Highcharts.chart "#{type}_rates",
     chart: zoomType: 'x'
-    title: text: "USD and EUR to RUB #{type} rates for 24 hours"
+    title: text: "USD and EUR to RUB #{type} rates for 7 days"
     subtitle: text: 'Source: <a href="https://www.tinkoff.ru">' + 'tinkoff.ru</a>'
     xAxis:
       type: 'category',

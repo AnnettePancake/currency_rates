@@ -9,7 +9,7 @@ class TinkoffRates
 
   def create_rates
     ActiveRecord::Base.transaction do
-      %w[USD EUR].each { |currency| create_rate(currency) }
+      Rate::CURRENCIES.each { |currency| create_rate(currency) }
     end
   end
 
